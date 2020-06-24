@@ -11,7 +11,7 @@ const Date = () => {
   const [contacts, setContacts] = useState([]);
   
   function fetchData() {
-    document.getElementById("api-button").innerHTML = '<span class="loading">⏳</span>';
+    document.getElementById("api-button").innerHTML = '<span role="img" aria-label="loading" class="loading">⏳</span>';
     setTimeout(
       ()=>{
         fetch("https://randomuser.me/api/?results=1&gender=female")
@@ -42,7 +42,7 @@ const Date = () => {
         </div>
         : 
         <button id="api-button" onClick={fetchData}>
-          Fetch my future partner ❤️
+          Fetch my future partner <span role="img" aria-label="heart">❤️</span>
         </button>
       }
     </div>
